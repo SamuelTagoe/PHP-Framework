@@ -1,12 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Demo</title>
-</head>
-<body>
+<?php
+require 'functions.php';
 
-    <h1>Hello Universe</h1>
+require 'router.php';
+
+// connect to our MySQL database
+
+class Person {
     
-</body>
-</html>
+}
