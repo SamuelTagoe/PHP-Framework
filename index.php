@@ -1,10 +1,17 @@
 <?php
 require 'functions.php';
-
 require 'router.php';
+require 'config.php';
+require 'Database.php';
 
-// connect to our MySQL database
+$config = require('config.php');
 
-class Person {
-    
-}
+$db = new Database($config['database']);
+
+$id = isset($_GET['id']) ? $_GET['id'] : null;
+$query = "select * from post where id = :id";
+
+$post = $db->query($query, [':id' => $id])->fetch();
+
+
+// phpinfo();
